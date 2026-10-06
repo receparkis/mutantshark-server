@@ -27,7 +27,7 @@ function startGame(type) {
     document.getElementById('startMenuWrapper').style.maxHeight = '0px';
     document.getElementById('gameAreaWrapper').style.opacity = 1;
     if (!socket) {
-        socket = io({ query: "type=" + type });
+        socket = io('https://mutantshark-server.onrender.com', { query: "type=" + type });
         setupSocket(socket);
     }
     if (!global.animLoopHandle)
