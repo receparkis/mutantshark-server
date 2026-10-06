@@ -388,9 +388,9 @@ function spawnSingleBot(customName) {
     map.players.pushNew(botPlayer);
 }
 
-// Spawn initial 10 bots
-for(let i=0; i<10; i++) {
-    spawnSingleBot(botNames[i]);
+// Spawn initial 50 bots to fill the massive 5000x5000 map
+for(let i=0; i<50; i++) {
+    spawnSingleBot(botNames[i % botNames.length]);
 }
 
 // BOT CHAT LOGIC
